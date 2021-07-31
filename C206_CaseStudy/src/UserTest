@@ -1,0 +1,54 @@
+/*
+ * I declare that this code was written by me. 
+ * I will not copy or allow others to copy my code. 
+ * I understand that copying code is considered as plagiarism.
+ * 
+ * Student Name: A. Elizabeth
+ * Student ID: 20020036
+ * Class: W67L
+ * Date/Time Last modified: ${currentDate:date('EEEE dd-MM-yyyy HH:mm')}
+ */
+
+import static org.junit.Assert.*;
+import java.util.ArrayList;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class UserTest {
+	
+	private User u1;
+	private User u2;
+	private User u3;
+	private User u4;
+	
+	private ArrayList<User> userList;
+	
+	public UserTest()
+	{
+		super();
+	}
+	
+	@Before
+	public void setUp() throws Exception
+	{
+		//Preparing test data
+		u1 = new User("John Lim", "12345", "johnlim@C206.com", "Buyer");
+		u2 = new User("James Tan", "12345", "jamestan@C206.com", "Buyer");
+		u3 = new User("Susan Chan", "12345", "susanchan@C206.com", "Seller");
+		u4 = new User("Joan Lee", "12345", "joanlee@C206.com", "Seller");
+		
+		userList = new ArrayList<User>();
+	}
+	
+	@Test
+	public void testAddUser()
+	{
+		// userList is not null, so that can add a new user
+		assertNotNull("Test if there is a valid userList arrayList to add to", userList);
+		
+		// Given an empty list, after adding 1 item, the size of the list is 1
+		C206_CaseStudy.addUser()
+	}
+
+}
